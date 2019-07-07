@@ -13,7 +13,7 @@ public class HiController {
     @Autowired
     HiService hiService;
 
-    @GetMapping("/callHi")
+    @GetMapping("/hi")
     public String callHi(){
         return hiService.callHi();
     }

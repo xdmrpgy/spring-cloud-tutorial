@@ -11,7 +11,7 @@
     <artifactId>service-ribbon</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>service-ribbon</name>
-    <description>Demo project for Spring Boot</description>
+    <description>ribbon + restTemplate实现负载均衡；Hystrix:熔断</description>
 
     <properties>
     </properties>

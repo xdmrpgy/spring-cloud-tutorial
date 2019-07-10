@@ -1,8 +1,11 @@
 package com.plato.servicefeign.service;
 
+import com.plato.servicebusiness.model.Employee;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @FeignClient(value = "eureka-client",fallback = SchedualServiceHiHystric.class)
 public interface SchedualServiceHi {
@@ -10,11 +13,11 @@ public interface SchedualServiceHi {
     String sayHi();
 
     @GetMapping("/getEmployeeByEmpId")
-    String getEmployeeByEmpId(String empId);
+    Employee getEmployeeByEmpId(String empId);
 
     @PostMapping("/addEmployee")
-    String addEmployee(String empId,String name);
+    String addEmployee(Employee employee);
 
     @GetMapping("/getAllEmployee")
-    String getAllEmployee();
+    List<Employee> getAllEmployee();
 }

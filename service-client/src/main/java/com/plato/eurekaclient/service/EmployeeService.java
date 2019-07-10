@@ -1,7 +1,7 @@
 package com.plato.eurekaclient.service;
 
 import com.plato.eurekaclient.dao.EmployeeDao;
-import com.plato.eurekaclient.model.Employee;
+import com.plato.servicebusiness.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,9 +19,9 @@ public class EmployeeService {
         return employeeDao.getEmployeeByEmpId(empId);
     }
 
-    public void addOne(String empId,String name){employeeDao.addOne(empId,name);}
+    public void addEmployee(Employee employee){employeeDao.addEmployee(employee);}
 
-    public List<Employee> getAll(){
-        return employeeDao.getAll();
+    public List<Employee> getAllEmployee(){
+        return employeeDao.getAllEmployee();
     }
 }

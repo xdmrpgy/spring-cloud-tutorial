@@ -1,4 +1,4 @@
-package com.plato.eurekaclient.model;
+package com.plato.servicebusiness.model;
 
 public enum Sex {
     MALE("0"),

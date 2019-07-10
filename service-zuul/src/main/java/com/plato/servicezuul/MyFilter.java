@@ -40,7 +40,7 @@ public class MyFilter extends ZuulFilter{
             ctx.setSendZuulResponse(false);
             ctx.setResponseStatusCode(401);
             try{
-                ctx.getResponse().getWriter().write("pls input token");
+                ctx.getResponse().getWriter().write("plz input token");
             }catch (Exception e){
                 System.out.println(e.getMessage());
             }

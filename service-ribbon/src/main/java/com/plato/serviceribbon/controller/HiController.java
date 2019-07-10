@@ -1,10 +1,13 @@
 package com.plato.serviceribbon.controller;
 
+import com.plato.servicebusiness.model.Employee;
 import com.plato.serviceribbon.service.HiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author by Roy Pan
@@ -21,17 +24,17 @@ public class HiController {
     }
 
     @GetMapping("/getEmployeeByEmpId")
-    public String getEmployeeByEmpId(String empId){
+    public Employee getEmployeeByEmpId(String empId){
         return hiService.callGetEmployeeByEmpId(empId);
     }
 
     @PostMapping("/addEmployee")
-    public String addEmployee(String empId,String name){
-        return hiService.callGetAddEmployee(empId,name);
+    public String addEmployee(Employee employee){
+        return hiService.callAddEmployee(employee);
     }
 
     @GetMapping("/getAllEmployee")
-    public String getAllEmployee(){
+    public List<Employee> getAllEmployee(){
         return hiService.callGetAllEmployee();
     }
 }

@@ -1,7 +1,7 @@
 package com.plato.eurekaclient.dao;
 
-import com.plato.eurekaclient.model.Employee;
-import com.plato.eurekaclient.model.Sex;
+import com.plato.servicebusiness.model.Employee;
+import com.plato.servicebusiness.model.Sex;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
@@ -30,10 +30,10 @@ public class EmployeeDao {
         return employeeList.stream().filter(emp -> (emp.getEmpId().equals(empId))).findFirst().orElse(null);
     }
 
-    public void addOne(String empId,String name){
+    public void addEmployee(Employee employee){
         Employee emp = new Employee();
-        emp.setEmpId(empId);
-        emp.setName(name);
+        emp.setEmpId(employee.getEmpId());
+        emp.setName(employee.getName());
         emp.setDesignation("haha");
         emp.setSex(Sex.MALE);
         emp.setBirthday(LocalDate.now());
@@ -41,7 +41,7 @@ public class EmployeeDao {
         employeeList.add(emp);
     }
 
-    public List<Employee> getAll(){
+    public List<Employee> getAllEmployee(){
         return employeeList;
     }
 

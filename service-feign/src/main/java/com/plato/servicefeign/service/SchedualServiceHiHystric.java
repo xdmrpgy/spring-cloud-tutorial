@@ -1,6 +1,9 @@
 package com.plato.servicefeign.service;
 
+import com.plato.servicebusiness.model.Employee;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * @author by Roy Pan
@@ -14,17 +17,17 @@ public class SchedualServiceHiHystric implements SchedualServiceHi {
     }
 
     @Override
-    public String getEmployeeByEmpId(String empId) {
+    public Employee getEmployeeByEmpId(String empId) {
+        return null;
+    }
+
+    @Override
+    public String addEmployee(Employee employee) {
         return "sorry,505";
     }
 
     @Override
-    public String addEmployee(String empId,String name) {
-        return "sorry,505";
-    }
-
-    @Override
-    public String getAllEmployee() {
-        return "sorry,505";
+    public List<Employee> getAllEmployee() {
+        return null;
     }
 }

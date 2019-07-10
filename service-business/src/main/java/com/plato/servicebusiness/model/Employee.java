@@ -1,4 +1,5 @@
-package com.plato.eurekaclient.model;
+package com.plato.servicebusiness.model;
+
 
 import lombok.Data;
 

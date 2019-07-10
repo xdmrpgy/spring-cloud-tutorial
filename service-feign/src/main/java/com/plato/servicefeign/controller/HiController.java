@@ -1,10 +1,13 @@
 package com.plato.servicefeign.controller;
 
+import com.plato.servicebusiness.model.Employee;
 import com.plato.servicefeign.service.SchedualServiceHi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author by Roy Pan
@@ -19,15 +22,15 @@ public class HiController {
         return schedualServiceHi.sayHi();
     }
     @GetMapping("/getFirstEmployee")
-    public String getEmployeeByEmpId(String empId){
+    public Employee getEmployeeByEmpId(String empId){
         return schedualServiceHi.getEmployeeByEmpId(empId);
     }
     @PostMapping("/addEmployee")
-    public String addEmployee(String empId,String name){
-        return schedualServiceHi.addEmployee(empId,name);
+    public String addEmployee(Employee employee){
+        return schedualServiceHi.addEmployee(employee);
     }
     @GetMapping("/getAllEmployee")
-    public String getAllEmployee(){
+    public List<Employee> getAllEmployee(){
         return schedualServiceHi.getAllEmployee();
     }
 }

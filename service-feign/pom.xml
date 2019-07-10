@@ -12,6 +12,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>service-feign</name>
     <description>feign:负载均衡,Hystrix:熔断</description>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>
@@ -31,6 +32,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.plato</groupId>
+            <artifactId>service-business</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

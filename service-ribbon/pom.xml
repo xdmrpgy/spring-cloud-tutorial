@@ -12,6 +12,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>service-ribbon</name>
     <description>ribbon + restTemplate实现负载均衡；Hystrix:熔断</description>
+    <packaging>jar</packaging>
 
     <properties>
     </properties>
@@ -32,6 +33,11 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.plato</groupId>
+            <artifactId>service-business</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
